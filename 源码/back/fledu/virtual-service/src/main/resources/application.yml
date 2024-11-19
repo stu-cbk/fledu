@@ -1,0 +1,19 @@
+server:
+  port: 8131
+  servlet:
+    context-path: /virtual
+
+spring:
+  application:
+    name: virtualservice
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+logging:
+  level:
+    com.example.virtual:
+      debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS

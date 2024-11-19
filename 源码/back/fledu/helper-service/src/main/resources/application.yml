@@ -1,0 +1,24 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /helper
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fledu_chat?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: helperservice # helper服务的服务名称
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+logging:
+  level:
+    com.example.helper:
+      debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS

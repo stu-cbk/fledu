@@ -1,0 +1,30 @@
+server:
+  port: 8121
+  servlet:
+    context-path: /video
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      enabled: true
+
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fledu_video?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: videoservice
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+logging:
+  level:
+    com.example.video:
+      debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS

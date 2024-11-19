@@ -1,0 +1,24 @@
+server:
+  port: 8101
+  servlet:
+    context-path: /doc
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/fledu_doc?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: docservice # doc服务的服务名称
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+logging:
+  level:
+    com.example.doc:
+      debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
